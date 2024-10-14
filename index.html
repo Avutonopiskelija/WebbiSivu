@@ -13,14 +13,8 @@
 
 </head>
 <style>
-  .bg-img
-  {
-    background-image: url('asssets/woman.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    }
+  
+    
 </style>
 <body>
   
@@ -131,12 +125,23 @@
 <input type="text" id="ingredientInput" placeholder="Enter ingredient" />
 <button id="searchByIngredient">Search</button>
 <div id="drinkList"></div>
-<div id="ingredientResults">
+<div id="ingredientResults"></div>
 </div>
-</div>
+
   <script src="assets/scripts.js" defer></script>
 
   <footer>
+    <p id="time"></p>
+<script>
+  setInterval(myTimer, 1000);
+
+  function myTimer() {
+    const d = new Date();
+    const time = d.toLocaleTimeString();
+    const date = d.toLocaleDateString('fi-FI');
+    document.getElementById("time").innerHTML = date + " " + time;
+  }
+</script>
     <p>Posted by: Jenni</p>
     <p>2024 
 </body>

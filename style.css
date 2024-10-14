@@ -8,6 +8,10 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Kiinnittää taustakuvan */
+    height: 100vh;
+    max-height: 100vh; /* Rajoittaa elementin korkeutta */
+    overflow: auto; /* Mahdollistaa sisällön vierittämisen, jos sisältö kasvaa */
     font-family: 'times new roman', sans-serif;
     text-align: center;
     background-color: rgb(248, 220, 233);

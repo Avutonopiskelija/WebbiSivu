@@ -1,8 +1,8 @@
 
 require('dotenv').config();
 // Replace 'YOUR_API_KEY' with your actual QuizAPI.io API key
-const apiKey = process.env.API_KEY;
-console.log("apikey on" + apiKey); //'gyFYoG23A9QndbwwZQqb1hymXK7Gj2jdpRVl3uHq';
+const apiKey =process.env.API_KEY;
+ //'gyFYoG23A9QndbwwZQqb1hymXK7Gj2jdpRVl3uHq';
 const apiUrl = 'https://quizapi.io/api/v1/questions?apiKey=' + apiKey + '&limit=5';
 
 // Quiz variables
