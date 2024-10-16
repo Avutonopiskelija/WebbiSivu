@@ -115,9 +115,13 @@ table {
     }
 
 th, td {
- padding: 8px;
- text-align: left;
+ padding: 5px;
+ text-align: center;
  border-bottom: 1px solid #DDD;
  }
 
 tr:hover {background-color: #D6EEEE;}
+
+.section {
+  padding: 60px 30px;
+}

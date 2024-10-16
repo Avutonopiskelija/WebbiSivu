@@ -31,6 +31,9 @@ document.getElementById('getCocktail').addEventListener('click', () => {
       .then(response => response.json())
       .then(data => {
         const drinks = data.drinks;
+
+        drinks.sort((a, b) => a.strDrink.localeCompare(b.strDrink));
+
         const resultsDiv = document.getElementById('ingredientResults');  
         resultsDiv.innerHTML = ''; // Tyhjennetään edellinen sisältö
         if (drinks) {
