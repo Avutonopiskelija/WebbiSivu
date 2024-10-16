@@ -114,3 +114,4 @@ fetchQuiz();
 
 // Attach event listener to the Start Quiz button
 startBtn.addEventListener('click', startQuiz);
+

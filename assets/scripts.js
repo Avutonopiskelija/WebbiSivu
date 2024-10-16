@@ -1,6 +1,11 @@
 document.getElementById('getCocktail').addEventListener('click', () => {
     fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Verkkovirhe');
+        }
+        return response.json();
+      })
       .then(data => {
         const cocktail = data.drinks[0];
         document.getElementById('cocktailDisplay').innerHTML = `
@@ -98,5 +103,30 @@ document.getElementById('getCocktail').addEventListener('click', () => {
     getDrinksByIngredient(); // tai joku muu ainesosa
   });
 
-  
-  
+  class Theme {
+    constructor() {
+        this.isDark = false; // Aloita vaalealla teemalla
+        this.applyTheme(); // Käytä oletusteemaa
+    }
+
+    toggleTheme() {
+        this.isDark = !this.isDark; // Vaihda teema
+        this.applyTheme(); // Käytä uutta teemaa
+    }
+
+    applyTheme() {
+        if (this.isDark) {
+            document.body.classList.add('dark-theme');
+            document.body.style.backgroundImage = "url('assets/image2.jpg')";
+        } else {
+            document.body.classList.remove('dark-theme');
+            document.body.style.backgroundImage = "url('assets/image.jpg')";
+        }
+    }
+}
+
+const theme = new Theme(); // Luo uusi Theme-instanssi
+
+document.getElementById('toggleTheme').addEventListener('click', () => {
+    theme.toggleTheme(); // Kutsu toggleTheme-metodia
+});
