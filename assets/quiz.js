@@ -1,6 +1,6 @@
 
 
-const apiKey ='gyFYoG23A9QndbwwZQqb1hymXK7Gj2jdpRVl3uHq';
+const apiKey ='';
  
 const apiUrl = 'https://quizapi.io/api/v1/questions?apiKey=' + apiKey + '&limit=5';
 
